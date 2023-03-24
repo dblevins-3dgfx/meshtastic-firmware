@@ -4,6 +4,7 @@
 #include "input/UpDownInterruptImpl1.h"
 #include "input/cardKbI2cImpl.h"
 #include "modules/AdminModule.h"
+#include "modules/BlevinsModule.h"
 #include "modules/CannedMessageModule.h"
 #include "modules/NodeInfoModule.h"
 #include "modules/PositionModule.h"
@@ -52,6 +53,7 @@ void setupModules()
 
         new RemoteHardwareModule();
         new ReplyModule();
+        new BlevinsModule();
 #if HAS_BUTTON
         rotaryEncoderInterruptImpl1 = new RotaryEncoderInterruptImpl1();
         rotaryEncoderInterruptImpl1->init();
